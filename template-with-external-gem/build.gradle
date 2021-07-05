@@ -1,0 +1,32 @@
+plugins {
+    id 'org.asciidoctor.jvm.convert' version '3.3.2'
+	id 'org.asciidoctor.jvm.gems' version '3.3.2'
+}
+
+apply plugin: 'org.asciidoctor.jvm.convert'
+apply plugin: 'org.asciidoctor.jvm.gems'
+
+repositories {
+	ruby.gems()
+	mavenCentral()
+}
+
+dependencies {
+	asciidoctorGems 'rubygems:fastimage:2.2.4'
+}
+
+asciidoctor {
+	dependsOn asciidoctorGemsPrepare
+	sourceDir projectDir
+	sources {
+		include 'doc.adoc'
+ 	}
+ 	resources {
+		from(sourceDir) { include 'img/**' }
+	}
+	
+	asciidoctorj {
+		requires 'fastimage'
+		options template_dirs: [ "${projectDir}/template" ]
+	}
+}

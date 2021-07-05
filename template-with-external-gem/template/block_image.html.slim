@@ -1,0 +1,8 @@
+= block_with_title({class: 'imageblock', style: (style_value text_align: (attr :align), float: (attr :float))}, :bottom)
+  .content
+    - fi_width, fi_height = FastImage.size("#{attr(:imagesdir)}/#{attr(:target)}")
+    - if (attr :link)
+      a.image href=(attr :link)
+        img src=image_uri(attr :target) alt=(attr :alt) width=(attr(:width) || fi_width) height=(attr(:height) || fi_height)
+    - else
+      img src=image_uri(attr :target) alt=(attr :alt) width=(attr(:width) || fi_width) height=(attr(:height) || fi_height)

@@ -1,0 +1,4 @@
+== Example doc
+:imagesdir: ./img
+
+image::annie-spratt-xUKHtTN2NcU-unsplash.jpg[]

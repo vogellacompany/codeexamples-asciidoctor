@@ -1,0 +1,13 @@
+= Example using a template with an external gem
+
+
+== Usage
+
+```
+./gradlew clean asciidoctor
+```
+
+== Licenses
+
+- `helpers.rb` and `block_image.html.slim` taken from https://github.com/asciidoctor/asciidoctor-backends. Original code is licensed under the MIT license. Only `block_image.html.slim` has been modified.
+- Other code is licensed under EPL v2.0
