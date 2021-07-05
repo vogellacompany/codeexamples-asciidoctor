@@ -1,0 +1,5 @@
+= Code examples for asciidoctor
+
+This repository contains example projects for asciidoctor and the asciidoctor gradle plug-in.
+
+Also check out the vogella https://www.vogella.com/tutorials/AsciiDoc/article.html[asciidoctor tutorial].
